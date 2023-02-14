@@ -1,3 +1,20 @@
-class Student 
+require 'pry'
+class Student < User
+
+    def initialize
+        @knowledge = []
+        
+    end
+
+    def learn(topic)
+        @knowledge << topic
+    end
+
+    def knowledge
+        @knowledge
+    end
+
 
 end
+
+# binding.pry
