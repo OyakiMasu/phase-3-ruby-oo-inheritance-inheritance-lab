@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+require 'pry'
 require_relative "../lib/user"
 require_relative "../lib/teacher"
 require_relative "../lib/student"
@@ -17,4 +17,21 @@ some_knowledge = avi.teach
 
 steve.learn(some_knowledge)
 
+jim = User.new
+jim.first_name = "Jim"
+jim.last_name = "Hendricks"
+
+# jim.learn(some_knowledge)
+
+gon = Student.new
+gon.first_name = "Gon"
+gon.last_name = "Freccess"
+
+gon.learn(some_knowledge)
+
+
+
 puts "Steve just learned this important knowledge: '#{steve.knowledge.first}' from Avi"
+puts "Gon just learned this important knowledge: '#{gon.knowledge.first}' from Avi"
+
+# binding.pry
